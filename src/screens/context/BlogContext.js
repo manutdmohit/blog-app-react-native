@@ -3,7 +3,10 @@ import React, { createContext } from 'react';
 const BlogContext = createContext();
 
 export const BLogProvider = ({ children }) => {
-  return <BlogContext.Provider value={5}>{children}</BlogContext.Provider>;
+  const blogPosts = [{ title: 'Blog Post1' }, { title: 'Blog Post2' }];
+  return (
+    <BlogContext.Provider value={blogPosts}>{children}</BlogContext.Provider>
+  );
 };
 
 export default BlogContext;
