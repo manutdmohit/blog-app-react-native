@@ -6,8 +6,8 @@ const blogReducer = (state, action) => {
       return [...state, { title: `Blog Post #${state.length + 1}` }];
   }
 };
-const addBlogPost = () => {
-  dispatch({ type: 'add_blogpost' });
+const addBlogPost = (dispatch) => {
+  return () => dispatch({ type: 'add_blogpost' });
 };
 
 export const { Context, Provider } = createDataContext(
