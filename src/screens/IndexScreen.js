@@ -1,10 +1,18 @@
 import React, { useContext } from 'react';
-import { FlatList, StyleSheet, Text, View, Button } from 'react-native';
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 import { Context } from '../context/BlogContext';
 import { Feather } from '@expo/vector-icons';
 
 const IndexScreen = () => {
   const { state, addBlogPost } = useContext(Context);
+
   return (
     <View>
       <Button onPress={addBlogPost} title="Generate Blog" />
@@ -14,8 +22,12 @@ const IndexScreen = () => {
         data={state}
         renderItem={({ item }) => (
           <View style={styles.row}>
-            <Text style={styles.title}>{item.title}</Text>
-            <Feather style={styles.icon} name="trash" />
+            <Text style={styles.title}>
+              {item.title} - {item.id}
+            </Text>
+            <TouchableOpacity onPress={() => console.log(item.id)}>
+              <Feather style={styles.icon} name="trash" />
+            </TouchableOpacity>
           </View>
         )}
       />
