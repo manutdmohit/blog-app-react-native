@@ -18,7 +18,7 @@ const CreateScreen = () => {
         style={styles.input}
         onChangeText={(text) => setContent(text)}
       />
-      <View style={styles.btn}>
+      <View>
         <Button title="Add Blog Post" />
       </View>
     </View>
@@ -38,10 +38,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 5,
     marginLeft: 5,
-  },
-  btn: {
-    marginHorizontal: 100,
-    backgroundColor: 'red',
   },
 });
 
