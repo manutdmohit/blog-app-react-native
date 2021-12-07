@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Context } from '../context/BlogContext';
 
 const ShowScreen = ({ navigation }) => {
