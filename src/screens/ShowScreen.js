@@ -25,6 +25,7 @@ ShowScreen.navigationOptions = ({ navigation }) => {
         <EvilIcons name="pencil" size={35} style={styles.edit} />
       </TouchableOpacity>
     ),
+    title: 'Details',
   };
 };
 

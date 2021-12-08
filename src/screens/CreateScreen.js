@@ -34,6 +34,10 @@ const CreateScreen = ({ navigation }) => {
   );
 };
 
+CreateScreen.navigationOptions = () => {
+  return { title: 'Edit Screen' };
+};
+
 const styles = StyleSheet.create({
   input: {
     fontSize: 18,
