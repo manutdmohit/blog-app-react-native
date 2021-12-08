@@ -1,33 +1,14 @@
 import React, { useContext } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
-import { useState } from 'react/cjs/react.development';
+import { StyleSheet } from 'react-native';
 import { Context } from '../context/BlogContext';
+import BlogPostForm from '../components/BlogPostForm';
 
 const EditScreen = ({ navigation }) => {
   const { state } = useContext(Context);
 
   const blogPost = state.find((post) => post.id === navigation.getParam('id'));
 
-  const [title, setTitle] = useState(blogPost.title);
-  const [content, setContent] = useState(blogPost.content);
-
-  return (
-    <View>
-      <Text style={styles.label}>Enter Title:</Text>
-      <TextInput
-        value={title}
-        style={styles.input}
-        onChangeText={(text) => setTitle(text)}
-      />
-      <Text style={styles.label}>Enter Content:</Text>
-      <TextInput
-        value={content}
-        style={styles.input}
-        onChangeText={(text) => setContent(text)}
-      />
-    </View>
-  );
+  return <BlogPostForm />;
 };
 
 const styles = StyleSheet.create({
