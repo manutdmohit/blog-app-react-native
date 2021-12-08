@@ -35,7 +35,7 @@ const CreateScreen = ({ navigation }) => {
 };
 
 CreateScreen.navigationOptions = () => {
-  return { title: 'Edit Screen' };
+  return { title: 'Create Screen' };
 };
 
 const styles = StyleSheet.create({
