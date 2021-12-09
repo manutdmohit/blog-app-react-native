@@ -21,7 +21,7 @@ const blogReducer = (state, action) => {
         return blogpost.id === action.payload.id ? action.payload : blogpost;
       });
 
-    case 'add_blogpost':
+    case 'get_blogposts':
       return action.payload;
 
     default: {
